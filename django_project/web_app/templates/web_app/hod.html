@@ -1,0 +1,16 @@
+{% block content %}
+{% for post in context %}
+<article class="media content-section">
+    <div class="media-body">
+        
+        <h1>{{post.full_name}}   	
+        {{ post.internship.comp_name }}
+    
+        {{ post.internship.job}}
+        {{post.status}}
+   </div>
+</article>
+{% empty %}
+<h1>No internships yet</h1>
+{% endfor %}
+{% endblock content %}
